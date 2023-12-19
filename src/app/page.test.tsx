@@ -59,7 +59,6 @@ jest.mock('./utils/quizData', () => ({
 describe('Home component', () => {
   it('renders the Home component', () => {
     const { getByText } = render(<Home />);
-    // @ts-ignore
     expect(getByText('Next >')).toBeInTheDocument();
   });
 

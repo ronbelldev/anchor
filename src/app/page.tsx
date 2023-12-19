@@ -4,6 +4,7 @@ import Button from '@/app/components/Button'
 import { quizData } from '@/app/utils/quizData'
 import Question from '@/app/components/Question'
 import './index.scss'
+import { getScore } from '@/app/utils/helpers'
 
 const START_GAME = 0
 
@@ -39,12 +40,9 @@ export default function Home() {
       <div className='home-content'>
         {isGameEnded ? (
             <div className='results-wrapper'>
-              <div className='results'>{`Your score is: ${userAnswers.reduce((acc, userAnswer, index) => {
-                if (correctAnswers[index] === userAnswer) {
-                  return acc + 20
-                }
-                return acc
-              }, 0)}!`}</div>
+              <div className='results'>
+                {`Your score is: ${getScore(correctAnswers, userAnswers)}!`}
+              </div>
               <Button
                 onClick={onClickRestart}
                 text='Restart'
