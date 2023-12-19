@@ -19,8 +19,8 @@ bun dev
 ```
 
 Run tests by running the command:
--Home page: `<br>`
-    jest src/app/page.test.tsx `<br>`
--Question component: `<br>`
+-Home page: ```bash```
+    jest src/app/page.test.tsx ```bash```
+-Question component: ```bash```
     jest /src/app/components/Question/Question.test 
 # anchor
