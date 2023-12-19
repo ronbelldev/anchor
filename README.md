@@ -21,12 +21,10 @@ bun dev
 Run tests by running the command:
 -Home page:
 ```bash
-```
     jest src/app/page.test.tsx 
-```bash
 ```
 -Question component: 
 ```bash
-```
     jest /src/app/components/Question/Question.test 
+```
 # anchor
