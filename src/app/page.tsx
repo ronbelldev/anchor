@@ -3,8 +3,9 @@ import React, { useState } from 'react'
 import Button from '@/app/components/Button'
 import { quizData } from '@/app/utils/quizData'
 import Question from '@/app/components/Question'
-const START_GAME = 0
 import './index.scss'
+
+const START_GAME = 0
 
 export default function Home() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(START_GAME)

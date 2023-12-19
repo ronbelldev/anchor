@@ -1,0 +1,69 @@
+.question-wrapper {
+    border-radius: 8px;
+    padding: 48px;
+    display: flex;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .question-title {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-left: 24px;
+    }
+
+    li {
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        border: 1px solid black;
+        position: relative;
+    }
+
+    li::before {
+        content: " ";  width: 8px; /* Width of the bullet */
+        height: 8px; /* Height of the bullet */
+        transform: rotate(45deg); /* Rotating the rectangle */
+        background: black; /* Set color for the bullet */
+        position: absolute; /* Positioning the bullet as absolute. It will relative to the li item */
+        left: -20px; /* Stick the bullet to the left side */
+        top: 15px; /* Align the bullet with the first line of li text */
+    }
+
+    li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    li:hover {
+        background-color: #f0f0f0;
+    }
+
+    li.selected {
+        background-color: #f0f0f0;
+    }
+
+    li.correct {
+        background-color: #4caf50;
+        color: #fff;
+    }
+
+    li.wrong {
+        background-color: #e82c2c;
+        color: #fff;
+    }
+
+    .buttons-container {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        justify-content: center;
+    }
+}
